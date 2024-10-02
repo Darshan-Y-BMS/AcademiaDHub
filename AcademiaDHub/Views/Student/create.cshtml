@@ -1,0 +1,257 @@
+﻿@model StudentDto
+@{
+	var classOptions = ViewBag.Classes as IEnumerable<SelectListItem>;
+	var SectionOptions = ViewBag.Sections as IEnumerable<SelectListItem>;
+	var HostelOptions = ViewBag.Hosteles as IEnumerable<SelectListItem>;
+}
+
+<div class="row">
+
+	<div class="col-md-8 mx-auto rounded border p-3">
+		<h2 class="text-center mb-5">New Student</h2>
+		<form method="post" enctype="multipart/form-data">
+			<div class="row mb-3"> 
+				<label class="col-sm-4 col-form-lable">First Name</label>
+				<div class="col-sm-8" >
+								<input class="form-control" asp-for="FirstName" />
+								<span asp-validation-for="FirstName" class="text-danger"></span>
+				</div>
+			</div>
+	
+			<div class="row mb-3">
+				<label class="col-sm-4 col-form-lable">Last Name</label>
+				<div class="col-sm-8">
+					<input class="form-control" asp-for="LastName" />
+					<span asp-validation-for="LastName" class="text-danger"></span>
+				</div>
+			</div>
+			<div class="row mb-3">
+				<label class="col-sm-4 col-form-label">Email</label>
+				<div class="col-sm-8">
+					<input class="form-control" asp-for="Email" type="email"/>
+					<span asp-validation-for="Email" class="text-danger"></span>
+				</div>
+			</div>
+
+
+			<div class="row mb-3">
+				<label class="col-sm-4 col-form-lable">Gender</label>
+				<div class="col-sm-8">
+					<input class="form-control" asp-for="Gender" />
+					<span asp-validation-for="Gender" class="text-danger"></span>
+				</div>
+			</div>
+			<div class="row mb-3">
+				<label class="col-sm-4 col-form-lable">Date of Birth</label>
+				<div class="col-sm-8">
+					<input class="form-control" asp-for="DateOfBirth" type="date" />
+					<span asp-validation-for="DateOfBirth" class="text-danger"></span>
+				</div>
+			</div>
+			<div  
+				 class="row mb-3">
+				<label class="col-sm-4 col-form-lable">Admission Date</label>
+				<div class="col-sm-8">
+					<input class="form-control" asp-for="AdmissionDate" type="date" />
+					<span asp-validation-for="AdmissionDate" class="text-danger"></span>
+				</div>
+			</div>
+
+
+
+
+			<div class="row mb-3">
+				<label class="col-sm-4 col-form-lable">Class</label>
+				<div class="col-sm-8">
+					<select class="form-select" asp-for="ClassId" asp-items="ViewBag.Classes">
+						<option value="">Select Class</option>
+					</select>
+					<span asp-validation-for="ClassId" class="text-danger"></span>
+				</div>
+			</div>
+
+
+			<div class="row mb-3">
+				<label class="col-sm-4 col-form-lable">Section</label>
+				<div class="col-sm-8">
+					<select class="form-select" asp-for="SectionId" asp-items="ViewBag.Sections">
+						<option value="">Select Section</option>
+					</select>
+					<span asp-validation-for="SectionId" class="text-danger"></span>
+				</div>
+			</div>
+
+			<div class="row mb-3">
+				<label class="col-sm-4 col-form-lable">Hostel ID</label>
+				<div class="col-sm-8">
+
+					<select class="form-select" asp-for="HostelerId" asp-items="ViewBag.Hosteles">
+						<option value="">Select Section</option>
+					</select>
+
+
+					<span asp-validation-for="HostelerId" class="text-danger"></span>
+				</div>
+			</div>
+
+
+			<div class="row mb-3">
+				<label class="col-sm-4 col-form-lable">Mother Tongue</label>
+				<div class="col-sm-8">
+					<input class="form-control" asp-for="MotherTongue" />
+					<span asp-validation-for="MotherTongue" class="text-danger"></span>
+				</div>
+			</div>
+
+			<div class="row mb-3">
+				<label class="col-sm-4 col-form-lable">Religion</label>
+				<div class="col-sm-8">
+					<input class="form-control" asp-for="Religion" />
+					<span asp-validation-for="Religion" class="text-danger"></span>
+				</div>
+			</div>
+
+			<div class="row mb-3">
+				<label class="col-sm-4 col-form-lable">Village</label>
+				<div class="col-sm-8">
+					<input class="form-control" asp-for="Village" />
+					<span asp-validation-for="Village" class="text-danger"></span>
+				</div>
+			</div>
+
+			<div class="row mb-3">
+				<label class="col-sm-4 col-form-lable">Town</label>
+				<div class="col-sm-8">
+					<input class="form-control" asp-for="Town" />
+					<span asp-validation-for="Town" class="text-danger"></span>
+				</div>
+			</div>
+
+@* 			<div class="row mb-3">
+				<label class="col-sm-4 col-form-lable">State</label>
+				<div class="col-sm-8">
+					<input class="form-control" asp-for="State" />
+					<span asp-validation-for="State" class="text-danger"></span>
+				</div>
+			</div> *@
+
+			<div class="row mb-3">
+				<label class="col-sm-4 col-form-label">State</label>
+				<div class="col-sm-8">
+					<select class="form-select" asp-for="State">
+						<option value="">Select State/UT</option>
+						<option value="Andaman and Nicobar Islands (UT)">Andaman and Nicobar Islands (UT)</option>
+						<option value="Andhra Pradesh">Andhra Pradesh</option>
+						<option value="Arunachal Pradesh">Arunachal Pradesh</option>
+						<option value="Assam">Assam</option>
+						<option value="Bihar">Bihar</option>
+						<option value="Chandigarh (UT)">Chandigarh (UT)</option>
+						<option value="Chhattisgarh">Chhattisgarh</option>
+						<option value="Dadra and Nagar Haveli and Daman and Diu (UT)">Dadra and Nagar Haveli and Daman and Diu (UT)</option>
+						<option value="Delhi (National Capital Territory)">Delhi (National Capital Territory)</option>
+						<option value="Goa">Goa</option>
+						<option value="Gujarat">Gujarat</option>
+						<option value="Haryana">Haryana</option>
+						<option value="Himachal Pradesh">Himachal Pradesh</option>
+						<option value="Jammu and Kashmir (UT)">Jammu and Kashmir (UT)</option>
+						<option value="Jharkhand">Jharkhand</option>
+						<option value="Karnataka">Karnataka</option>
+						<option value="Kerala">Kerala</option>
+						<option value="Ladakh (UT)">Ladakh (UT)</option>
+						<option value="Lakshadweep (UT)">Lakshadweep (UT)</option>
+						<option value="Madhya Pradesh">Madhya Pradesh</option>
+						<option value="Maharashtra">Maharashtra</option>
+						<option value="Manipur">Manipur</option>
+						<option value="Meghalaya">Meghalaya</option>
+						<option value="Mizoram">Mizoram</option>
+						<option value="Nagaland">Nagaland</option>
+						<option value="Odisha">Odisha</option>
+						<option value="Puducherry (UT)">Puducherry (UT)</option>
+						<option value="Punjab">Punjab</option>
+						<option value="Rajasthan">Rajasthan</option>
+						<option value="Sikkim">Sikkim</option>
+						<option value="Tamil Nadu">Tamil Nadu</option>
+						<option value="Telangana">Telangana</option>
+						<option value="Tripura">Tripura</option>
+						<option value="Uttar Pradesh">Uttar Pradesh</option>
+						<option value="Uttarakhand">Uttarakhand</option>
+						<option value="West Bengal">West Bengal</option>
+					</select>
+					<span asp-validation-for="State" class="text-danger"></span>
+				</div>
+			</div>
+
+
+			<div class="row mb-3">
+				<label class="col-sm-4 col-form-lable">Place of Birth</label>
+				<div class="col-sm-8">
+					<input class="form-control" asp-for="PlaceOfBirth" />
+					<span asp-validation-for="PlaceOfBirth" class="text-danger"></span>
+				</div>
+			</div>
+
+			<div class="row mb-3">
+				<label class="col-sm-4 col-form-lable">Mobile</label>
+				<div class="col-sm-8">
+					<input class="form-control" asp-for="Mobile" />
+					<span asp-validation-for="Mobile" class="text-danger"></span>
+				</div>
+			</div>
+
+			<div class="row mb-3">
+				<label class="col-sm-4 col-form-lable">Aadhar Number</label>
+				<div class="col-sm-8">
+					<input class="form-control" asp-for="AadharNumber" />
+					<span asp-validation-for="AadharNumber" class="text-danger"></span>
+				</div>
+			</div>
+
+			<div class="row mb-3">
+				<label class="col-sm-4 col-form-lable">Parent ID</label>
+				<div class="col-sm-8">
+					<input class="form-control" asp-for="ParentId" />
+					<span asp-validation-for="ParentId" class="text-danger"></span>
+				</div>
+			</div>
+
+			<div class="row mb-3">
+				<label class="col-sm-4 col-form-lable">Guardian ID</label>
+				<div class="col-sm-8">
+					<input class="form-control" asp-for="GuardianId" />
+					<span asp-validation-for="GuardianId" class="text-danger"></span>
+				</div>
+			</div>
+
+
+
+
+
+
+			<div class="row mb-3">
+				<label class="col-sm-4 col-form-lable">Image</label>
+				<div class="col-sm-8">
+					<input class="form-control" asp-for="ImageFile" />
+					<span asp-validation-for="ImageFile" class="text-danger"></span>
+				</div>
+			</div>
+
+
+			<div class="row">
+				<div class="offset-sm-4 col-sm-4 d-grid">
+
+					<button type="submit" class="btn btn-primary">Submit</button>
+				</div>
+
+				<div class="col-sm-4 d-grid">
+					<a class="btn btn-outline-primary" asp-controller="Student" asp-action="Index" role="button">
+						Cancel
+					</a>
+				</div>
+			</div>
+
+
+		</form>
+
+
+	</div>
+<</div>

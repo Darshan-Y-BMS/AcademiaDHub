@@ -1,0 +1,225 @@
+﻿@* @model AcademiaDHub.Models.Student
+
+<div class="container mt-5">
+    <h2 class="text-center mb-5">Student Details</h2>
+
+    <div class="row mb-3">
+        <div class="col-md-4"><strong>Profile Image:</strong></div>
+        <div class="col-md-8"><img src="/students/@Model.ImageFileName" width="150" /></div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="col-md-4"><strong>Enrollment No:</strong></div>
+        <div class="col-md-8">@Model.EnrollmentNo</div>
+    </div>
+
+
+    <div class="row mb-3">
+        <div class="col-md-4"><strong>First Name:</strong></div>
+        <div class="col-md-8">@Model.FirstName</div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="col-md-4"><strong>Last Name:</strong></div>
+        <div class="col-md-8">@Model.LastName</div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="col-md-4"><strong>Mother Tongue:</strong></div>
+        <div class="col-md-8">@Model.MotherTongue</div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="col-md-4"><strong>Religion:</strong></div>
+        <div class="col-md-8">@Model.Religion</div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="col-md-4"><strong>Gender:</strong></div>
+        <div class="col-md-8">@Model.Gender</div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="col-md-4"><strong>Village:</strong></div>
+        <div class="col-md-8">@Model.Village</div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="col-md-4"><strong>Town:</strong></div>
+        <div class="col-md-8">@Model.Town</div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="col-md-4"><strong>State:</strong></div>
+        <div class="col-md-8">@Model.State</div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="col-md-4"><strong>Email:</strong></div>
+        <div class="col-md-8">@Model.Email</div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="col-md-4"><strong>Place of Birth:</strong></div>
+        <div class="col-md-8">@Model.PlaceOfBirth</div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="col-md-4"><strong>Mobile:</strong></div>
+        <div class="col-md-8">@Model.Mobile</div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="col-md-4"><strong>Aadhar Number:</strong></div>
+        <div class="col-md-8">@Model.AadharNumber</div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="col-md-4"><strong>Class:</strong></div>
+        <div class="col-md-8">@Model.ClassId</div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="col-md-4"><strong>Section:</strong></div>
+        <div class="col-md-8">@Model.SectionId</div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="col-md-4"><strong>Parent ID:</strong></div>
+        <div class="col-md-8">@Model.ParentId</div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="col-md-4"><strong>Guardian ID:</strong></div>
+        <div class="col-md-8">@Model.GuardianId</div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="col-md-4"><strong>Hosteler ID:</strong></div>
+        <div class="col-md-8">@Model.HostelerId</div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="col-md-4"><strong>Date of Birth:</strong></div>
+        <div class="col-md-8">@Model.DateOfBirth.ToString("dd/MM/yyyy")</div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="col-md-4"><strong>Admission Date:</strong></div>
+        <div class="col-md-8">@Model.AdmissionDate.ToString("dd/MM/yyyy")</div>
+    </div>
+
+
+
+    <div class="row">
+        <div class="col text-center mt-4">
+            <a class="btn btn-primary btn-sm" asp-controller="Student" asp-action="Index" >Go Back</a>
+        </div>
+    </div>
+</div>
+ *@
+
+
+ @model AcademiaDHub.Models.Student
+
+<div class="container mt-5">
+    <h2 class="text-center mb-5">Student Details</h2>
+
+    <div class="card">
+        <div class="row no-gutters">
+            <div class="col-md-4 text-center">
+                <img src="/students/@Model.ImageFileName" class="card-img" alt="Profile Image" />
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+
+                    <div class="row mb-3">
+                        <div class="col-md-4"><strong>Enrollment No:</strong></div>
+                        <div class="col-md-8">@Model.EnrollmentNo</div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-4"><strong>First Name:</strong></div>
+                        <div class="col-md-8">@Model.FirstName</div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-4"><strong>Last Name:</strong></div>
+                        <div class="col-md-8">@Model.LastName</div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-4"><strong>Mother Tongue:</strong></div>
+                        <div class="col-md-8">@Model.MotherTongue</div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-4"><strong>Religion:</strong></div>
+                        <div class="col-md-8">@Model.Religion</div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-4"><strong>Gender:</strong></div>
+                        <div class="col-md-8">@Model.Gender</div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-4"><strong>Village:</strong></div>
+                        <div class="col-md-8">@Model.Village</div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-4"><strong>Town:</strong></div>
+                        <div class="col-md-8">@Model.Town</div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-4"><strong>State:</strong></div>
+                        <div class="col-md-8">@Model.State</div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-4"><strong>Email:</strong></div>
+                        <div class="col-md-8">@Model.Email</div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-4"><strong>Place of Birth:</strong></div>
+                        <div class="col-md-8">@Model.PlaceOfBirth</div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-4"><strong>Mobile:</strong></div>
+                        <div class="col-md-8">@Model.Mobile</div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-4"><strong>Aadhar Number:</strong></div>
+                        <div class="col-md-8">@Model.AadharNumber</div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-4"><strong>Class:</strong></div>
+                        <div class="col-md-8">@Model.ClassId</div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-4"><strong>Section:</strong></div>
+                        <div class="col-md-8">@Model.SectionId</div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-4"><strong>Parent ID:</strong></div>
+                        <div class="col-md-8">@Model.ParentId</div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-4"><strong>Guardian ID:</strong></div>
+                        <div class="col-md-8">@Model.GuardianId</div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-4"><strong>Hosteler ID:</strong></div>
+                        <div class="col-md-8">@Model.HostelerId</div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-4"><strong>Date of Birth:</strong></div>
+                        <div class="col-md-8">@Model.DateOfBirth.ToString("dd/MM/yyyy")</div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-4"><strong>Admission Date:</strong></div>
+                        <div class="col-md-8">@Model.AdmissionDate.ToString("dd/MM/yyyy")</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col text-center mt-4">
+            <a class="btn btn-primary btn-sm" asp-controller="Student" asp-action="Index">Go Back</a>
+        </div>
+    </div>
+</div>

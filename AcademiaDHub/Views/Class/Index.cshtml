@@ -1,0 +1,32 @@
+﻿@model List<AcademiaDHub.Models.Class>
+
+<h2 class="text-center mb-5">List of Classes</h2>
+
+<div class="row mb-5">
+    <div class="col">
+        <a class="btn btn-primary" asp-controller="Class" asp-action="Create">Add New Class</a>
+    </div>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Class Name</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var classEntity in Model)
+        {
+            <tr>
+                <td>@classEntity.ClassId</td>
+                <td>@classEntity.ClassName</td>
+                <td style="white-space: nowrap">
+                    <a class="btn btn-primary btn-sm" asp-controller="Class" asp-action="Edit" asp-route-id="@classEntity.ClassId">Edit</a>
+                    <a class="btn btn-danger btn-sm" asp-controller="Class" asp-action="Delete" asp-route-id="@classEntity.ClassId" onclick="return confirm('Are you sure?')">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

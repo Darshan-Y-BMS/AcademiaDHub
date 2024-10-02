@@ -1,0 +1,217 @@
+﻿@model StudentDto
+@{
+}
+
+<div class="row">
+
+	<div class="col-md-8 mx-auto rounded border p-3">
+		<h2 class="text-center mb-5">Edit Student Details</h2>
+
+
+
+		<form method="post" enctype="multipart/form-data">
+			<div class="row mb-3">
+				<label class="col-sm-4 col-form-lable">Enrollment Number</label>
+				<div class="col-sm-8">
+					<input class="form-control-plaintext" readonly value="@ViewData["EnrollmentNo"]">
+
+				</div>
+			</div>
+
+			<div class="row mb-3">
+				<label class="col-sm-4 col-form-lable">First Name</label>
+				<div class="col-sm-8">
+					<input class="form-control" asp-for="FirstName" />
+					<span asp-validation-for="FirstName" class="text-danger"></span>
+				</div>
+			</div>
+
+			<div class="row mb-3">
+				<label class="col-sm-4 col-form-lable">Last Name</label>
+				<div class="col-sm-8">
+					<input class="form-control" asp-for="LastName" />
+					<span asp-validation-for="LastName" class="text-danger"></span>
+				</div>
+			</div>
+			<div class="row mb-3">
+				<label class="col-sm-4 col-form-lable">Gender</label>
+				<div class="col-sm-8">
+					<input class="form-control" asp-for="Gender" />
+					<span asp-validation-for="Gender" class="text-danger"></span>
+				</div>
+			</div>
+			<div class="row mb-3">
+				<label class="col-sm-4 col-form-lable">Date of Birth</label>
+				<div class="col-sm-8">
+					<input class="form-control" asp-for="DateOfBirth" type="date" />
+					<span asp-validation-for="DateOfBirth" class="text-danger"></span>
+				</div>
+			</div>
+
+			<div  
+				 class="row mb-3">
+				<label class="col-sm-4 col-form-lable">Admission Date</label>
+				<div class="col-sm-8">
+					<input class="form-control" asp-for="AdmissionDate" type="date" />
+					<span asp-validation-for="AdmissionDate" class="text-danger"></span>
+				</div>
+			</div>
+
+			<div class="row mb-3">
+				<label class="col-sm-4 col-form-lable">Class</label>
+				<div class="col-sm-8">
+					<select class="form-select" asp-for="ClassId">
+						<option value="">Select Class</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+						<option value="8">8</option>
+					</select>
+					<span asp-validation-for="ClassId" class="text-danger"></span>
+				</div>
+			</div>
+
+
+
+			<div class="row mb-3">
+				<label class="col-sm-4 col-form-lable">Section</label>
+				<div class="col-sm-8">
+					<select class="form-select" asp-for="SectionId">
+						<option value="">Select Section</option>
+						<option value="1">A</option>
+						<option value="2">B</option>
+						<option value="3">C</option>
+						<option value="4">D</option>
+					</select>
+					<span asp-validation-for="SectionId" class="text-danger"></span>
+				</div>
+			</div>
+
+			<div class="row mb-3">
+				<label class="col-sm-4 col-form-lable">Mother Tongue</label>
+				<div class="col-sm-8">
+					<input class="form-control" asp-for="MotherTongue" />
+					<span asp-validation-for="MotherTongue" class="text-danger"></span>
+				</div>
+			</div>
+
+			<div class="row mb-3">
+				<label class="col-sm-4 col-form-lable">Religion</label>
+				<div class="col-sm-8">
+					<input class="form-control" asp-for="Religion" />
+					<span asp-validation-for="Religion" class="text-danger"></span>
+				</div>
+			</div>
+
+			<div class="row mb-3">
+				<label class="col-sm-4 col-form-lable">Village</label>
+				<div class="col-sm-8">
+					<input class="form-control" asp-for="Village" />
+					<span asp-validation-for="Village" class="text-danger"></span>
+				</div>
+			</div>
+
+			<div class="row mb-3">
+				<label class="col-sm-4 col-form-lable">Town</label>
+				<div class="col-sm-8">
+					<input class="form-control" asp-for="Town" />
+					<span asp-validation-for="Town" class="text-danger"></span>
+				</div>
+			</div>
+
+			<div class="row mb-3">
+				<label class="col-sm-4 col-form-lable">State</label>
+				<div class="col-sm-8">
+					<input class="form-control" asp-for="State" />
+					<span asp-validation-for="State" class="text-danger"></span>
+				</div>
+			</div>
+
+			<div class="row mb-3">
+				<label class="col-sm-4 col-form-lable">Place of Birth</label>
+				<div class="col-sm-8">
+					<input class="form-control" asp-for="PlaceOfBirth" />
+					<span asp-validation-for="PlaceOfBirth" class="text-danger"></span>
+				</div>
+			</div>
+
+			<div class="row mb-3">
+				<label class="col-sm-4 col-form-lable">Mobile</label>
+				<div class="col-sm-8">
+					<input class="form-control" asp-for="Mobile" />
+					<span asp-validation-for="Mobile" class="text-danger"></span>
+				</div>
+			</div>
+
+			<div class="row mb-3">
+				<label class="col-sm-4 col-form-lable">Aadhar Number</label>
+				<div class="col-sm-8">
+					<input class="form-control" asp-for="AadharNumber" />
+					<span asp-validation-for="AadharNumber" class="text-danger"></span>
+				</div>
+			</div>
+
+			<div class="row mb-3">
+				<label class="col-sm-4 col-form-lable">Parent ID</label>
+				<div class="col-sm-8">
+					<input class="form-control" asp-for="ParentId" />
+					<span asp-validation-for="ParentId" class="text-danger"></span>
+				</div>
+			</div>
+
+			<div class="row mb-3">
+				<label class="col-sm-4 col-form-lable">Guardian ID</label>
+				<div class="col-sm-8">
+					<input class="form-control" asp-for="GuardianId" />
+					<span asp-validation-for="GuardianId" class="text-danger"></span>
+				</div>
+			</div>
+
+			<div class="row mb-3">
+				<label class="col-sm-4 col-form-lable">Hosteler ID</label>
+				<div class="col-sm-8">
+					<input class="form-control" asp-for="HostelerId" />
+					<span asp-validation-for="HostelerId" class="text-danger"></span>
+				</div>
+			</div>
+
+			<div class="row mb-3">
+				<div class="offset-sm-4 col-sm-8">
+					<img src="/students/@ViewData["ImageFileName"]" width="150" />
+				</div>
+			</div>
+
+
+			<div class="row mb-3">
+				<label class="col-sm-4 col-form-lable">Image</label>
+				<div class="col-sm-8">
+					<input class="form-control" asp-for="ImageFile" />
+					<span asp-validation-for="ImageFile" class="text-danger"></span>
+				</div>
+			</div>
+
+
+			<div class="row">
+				<div class="offset-sm-4 col-sm-4 d-grid">
+
+					<button type="submit" class="btn btn-primary">Submit</button>
+				</div>
+
+				<div class="col-sm-4 d-grid">
+					<a class="btn btn-outline-primary" asp-controller="Student" asp-action="Index" role="button">
+						Cancel
+					</a>
+				</div>
+			</div>
+
+
+		</form>
+
+
+	</div>
+	<
+</div>
